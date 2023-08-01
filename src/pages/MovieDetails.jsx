@@ -8,7 +8,7 @@ export function MovieDetails() {
     <div className={styles.detailsContainer}>
         <img className={`${styles.col} ${styles.movieImage}`} src={imageUrl} alt={movie.title} />
         <div className={`${styles.col} ${styles.movieDetails}`}>
-            <p>
+            <p className={styles.firstItem}>
                 <strong>Title:</strong> {movie.title}
             </p>
             <p>
