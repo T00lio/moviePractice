@@ -1,8 +1,9 @@
 import styles from './App.module.css';
-// import { MovieGrid } from './components/MovieGrid';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { MovieDetails } from './pages/MovieDetails';
 import { LandingPage } from './pages/LandingPage';
+
+
 
 
 function App() {
@@ -15,11 +16,13 @@ function App() {
       
       </header>
       <main>
-      <Routes>
-        <Route path="/movie" element={<MovieDetails/>}/>
-        <Route path="/" element={<LandingPage />} />
-        
-      </Routes>
+          <Routes>
+            <Route path="/movie/:movie.id" element={<MovieDetails/>}>
+            </Route>
+            <Route path="/" element={<LandingPage/>}>
+            </Route>
+          </Routes>
+
       </main>
     </Router>
   );
